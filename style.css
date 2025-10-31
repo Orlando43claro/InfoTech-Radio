@@ -1,0 +1,217 @@
+:root {
+    /* Variables de color */
+    --color-dark-bg: #1e1e1e; /* Fondo oscuro */
+    --color-light-text: #fff;
+    --color-highlight: #00bcd4; /* Color turquesa para el botón principal */
+    --color-menu-bg: #fff; /* Fondo claro para el menú lateral (como en tu imagen) */
+    --color-menu-text: #333;
+    --color-menu-active-bg: #e0e0e0;
+}
+
+/* ----------------- Diseño General y Responsivo ----------------- */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#main-content {
+    width: 100%;
+    max-width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 50px;
+}
+
+.radio-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* ----------------- Logo y Títulos ----------------- */
+
+.radio-logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px; 
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para destacar el logo */
+}
+
+.radio-name {
+    font-size: 1.8rem;
+    margin: 10px 0 5px;
+}
+
+.radio-slogan {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+/* ----------------- Imagen del Libro (Simulación de fondo) ----------------- */
+/* Necesitas guardar una imagen llamada 'book-background.jpg' en tu carpeta para que esto funcione */
+.book-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%; 
+    background-image: url('book-background.jpg'); 
+    background-size: cover;
+    background-position: center bottom; /* Enfocar en la parte inferior */
+    background-repeat: no-repeat;
+    opacity: 0.15; 
+    z-index: -1;
+}
+
+/* ----------------- Controles del Reproductor ----------------- */
+
+.controls-container {
+    position: fixed; 
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 350px;
+}
+
+.control-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-light-text);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.control-btn .material-icons {
+    font-size: 28px;
+}
+
+.main-control-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-highlight);
+    color: var(--color-dark-bg);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.main-control-btn .material-icons {
+    font-size: 40px;
+    margin-left: 3px; 
+}
+
+/* ----------------- Menú Lateral ----------------- */
+
+.menu-toggle {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    color: var(--color-light-text);
+    cursor: pointer;
+    z-index: 1001; 
+}
+
+.menu-toggle .material-icons {
+    font-size: 30px;
+}
+
+#menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background-color: var(--color-menu-bg);
+    color: var(--color-menu-text);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease-in-out;
+    padding: 20px 0;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+#menu-lateral.open {
+    transform: translateX(0); 
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos de la Navegación */
+.menu-nav ul, .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-nav li a, .social-links li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--color-menu-text);
+    font-size: 1rem;
+    transition: background-color 0.1s;
+}
+
+.menu-nav li.active {
+    background-color: var(--color-menu-active-bg);
+}
+
+.social-links h3 {
+    padding: 15px 20px 0;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+/* Estilo de los íconos de Font Awesome y Material Icons en el menú */
+.social-links li a .fab,
+.social-links li a .material-icons,
+.menu-nav li a .material-icons {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+    margin-right: 15px;
+    color: #444; /* Color para los íconos del menú */
+}
+
+/* Eliminado: .ad-placeholder */

@@ -1,135 +1,65 @@
 <!DOCTYPE html>
-<head><title>developer</title>
-
-<style>
-*{padding: 0;
-margin: 0;
-
-}
-
-body{width:100%; height: 100%; background: #ffffff;}
-  
- .section01{margin: 2px;  height: 12px; width:80%; }
-.section01 img{ height: 12px; float: right;} 
-  
-.container{ 
-height: 150px; width:100%;}
-
-#section1{text-align: center;
-width:44%; height: 150px; float: right; }
-#section1 img{border:  1px solid black; border-radius: 10px;  text-align: center;}
-
-  
-#section2{
-width:55%; height: 100px;}
-#titulo{ padding: 15px; margin: 10px; text-align: center;}
-
-#section3{
-width:55%; height: 49px; display: flex;}
-
-#section4{ width:50%; height: 49px; margin: 10px; text-align: center;}
-#linea{ height: 49px; border:  1px solid black;}
-#section5{width:50%; height: 49px; float: right; margin: 10px; text-align: center;}
-
-
-
-.nav{width:100%; height: 30px; text-align: center;}
-
-.nav a{display: block; text-decoration: none;
-    font-size: 16px; /* Tamaño de letra */
-    text-transform: uppercase; /* Letras en mayúscula */
-    background: #6B3618; /* Color de fondo */
-    padding: 10px 15px; /* Relleno */
-    margin: 10px;
-    color: #FFD059; /* Color de texto */
-    border-bottom: solid 2px #FFD059; /* Borde inferior */
-    border-radius: 10px; color: #ffffff;  }
-
-  #section03{
-width:100%; height: 49px; display: flex;}
-#section08{ width:10%;}
-  
-#section04{ width:50%; height: 49px; padding: 2px; 49px; float: right; margin: 10px; text-align: center;}
-
-#section05{width:50%; height: 49px; float: right; margin: 10px; text-align: center;}
-#section05 a{display: block; text-decoration: none;
-    font-size: 14px; /* Tamaño de letra */
-    text-transform: uppercase; /* Letras en mayúscula */
-    background: #6B3618; /* Color de fondo */
-    padding: 10px 15px; /* Relleno */
-    margin: 1px;
-    color: #FFD059; /* Color de texto */
-    border-bottom: solid 2px #FFD059; /* Borde inferior */
-    border-radius: 10px; color: #ffffff;  }
-
-  
-.main{   width:100%;  max-height: 220px;  display: flex; overflow-x: auto;}
-#section6 img{ border: 1px solid black; border-radius: 10px; height: 200px; width: 130px;  display: flex;}
-#section6{ margin: 5px; border-radius: 10px;  display: flex;}
-
-
-.footer{ width:90%; height: 100%; margin: 10px; }
-p{padding: 10px; }
-</style>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio IPUC - App Web Responsiva</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-  
-  <section class="section01">
-  <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="https://websmultimedia.com/contador-de-visitas.php?id=6614">
- </section>
-  
-<div class="container">
-<section id="section1"><img src="1.jpg" width="110"  height="110">
-</section>
 
-<section id="section2"><center><h2 id="titulo">InfoTech Radio</h2></center>
-</section>
+    <aside id="menu-lateral">
+        <div class="menu-header">
+            <span class="material-icons menu-icon">public</span>
+            <h2>Radio IPUC</h2>
+        </div>
+        <nav class="menu-nav">
+            <ul>
+                <li class="active"><a href="#"><span class="material-icons">home</span>Inicio</a></li>
+                <li><a href="#"><span class="material-icons">settings</span>Ajustes</a></li>
+            </ul>
+        </nav>
+        <h3>Redes Sociales</h3>
+        <ul class="social-links">
+            <li><a href="https://ipuc.org.co/" target="_blank"><span class="material-icons">language</span>Sitio web</a></li>
+            <li><a href="https://www.instagram.com/radioipucoficial" target="_blank"><i class="fab fa-instagram social-icon"></i>Instagram</a></li>
+            <li><a href="https://twitter.com/radioipuc" target="_blank"><i class="fab fa-x-twitter social-icon"></i>Twitter</a></li>
+            <li><a href="https://www.youtube.com/@radioipucoficial" target="_blank"><i class="fab fa-youtube social-icon"></i>YouTube</a></li>
+        </ul>
+        </aside>
 
-<section id="section3">
-<div id="section4">Versión<br>9.8(8)
-</div>
-<div id="linea"></div>
-<div id="section5">Tamaño<br>13,62MB
-</div>
-</section>
-</div>
+    <main id="main-content">
+        <button id="menu-toggle" class="menu-toggle">
+            <span class="material-icons">menu</span>
+        </button>
 
-<div class="nav"> 
-<a href="Info_Tech_Radio.developer-shop.apk" download="Info_Tech_Radio.developer-shop" ><center>Descargar</center></a>
-</div>
+        <div class="radio-player">
+            <div class="logo-container">
+                <img src="radio.jpeg" alt="Logo Radio IPUC" class="radio-logo">
+            </div>
 
- <section id="section03">
-<div id="section08">
-</div>
-<div id="section04"><b>Calificación:</b><br>3.6<img src="19[1].png">
-</div>
-<div id="section05"><a href="comentarios.html" ><center>Comentarios</center></a> 
-</div>
-</section>
- 
-  
-<div class="main">
-<section id="section6">
-<img src="2.jpg" >
-</section>
-<section id="section6">
-<img src="3.jpg">
-</section>
-<section id="section6">
-<img src="4.jpg"  >
-</section>
-<section id="section6">
-<img src="5.jpg" >
-</section>
-<section id="section6">
-<img src="6.jpg" >
-</section>
-</div>
+            <h1 class="radio-name">Radio IPUC</h1>
+            <p class="radio-slogan">Un Señor, una fe, un bautismo</p>
 
-<div class="footer">
-<p>
-<h4>Descripción:</h4><br><p>Aplicación de InfoTech Radio, podrás escuchar nuestra emisora online desde distintos servidores de streaming, acceder a nuestro canal de MixCloud y Spotify y mucho más.</p>
+            <div class="book-image"></div> 
 
-</div>
+            <div class="controls-container">
+                <button class="control-btn"><span class="material-icons">alarm</span></button>
+
+                <button id="play-pause-btn" class="main-control-btn">
+                    <span class="material-icons">play_arrow</span>
+                </button>
+
+                <button class="control-btn"><span class="material-icons">volume_up</span></button>
+            </div>
+            
+            <audio id="radio-stream" preload="none"></audio>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
